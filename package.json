@@ -1,0 +1,27 @@
+{
+  "name": "burgerapp",
+  "version": "1.0.0",
+  "description": "Full-stack app that uses node, handlebars, express, mySQL, and object-relational mapping.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jameygronewald/burgerApp.git"
+  },
+  "author": "Jamey Gronewald",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jameygronewald/burgerApp/issues"
+  },
+  "homepage": "https://github.com/jameygronewald/burgerApp#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.0.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.4"
+  }
+}
