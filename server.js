@@ -1,10 +1,9 @@
 const express = require('express');
 const exphbs = require("express-handlebars");
-const orm = require('./config/orm.js');
 
 const app = express();
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 
@@ -14,17 +13,9 @@ app.use(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-orm.selectAll('burger_name', 'burgers')
-.then(result => {
-  console.log(result);
-})
-.catch(err => {
-  console.log(err)
-});
+const routes = require('./controllers/burgersController');
 
-// orm.insertOne('burgers', 'burger_name', 'Turkey Gouda Burger');
-
-// orm.updateOne('burgers', 'burger_name', 'Goat Cheese and Honey Burger', '5');
+app.use(routes);
 
 app.listen(PORT, function() {
   console.log("Server listening on: http://localhost:" + PORT);
