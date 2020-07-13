@@ -6,18 +6,19 @@ const connection = require('./connection');
 
 const orm = {
     selectAll: function(column, table) {
-        const queryString = `SELECT ?? FROM ??`;
-        connection.query(queryString, [column, table], (err, result) => {
-          if (err) throw err;
-          console.log(result);
-        });
-      
+        return new Promise((resolve, reject) => {
+            const queryString = `SELECT ?? FROM ??`;
+            connection.query(queryString, [column, table], (err, result) => {
+            if (err) reject(err);
+            resolve(result);
+            })
+        });  
     },
-    insertOne: function(column, value) {
+    insertOne: function(table, column, value) {
         const queryString = 
-        `INSERT INTO (??) 
+        `INSERT INTO ?? (??) 
         VALUES(?)`;
-        connection.query(queryString, [column, value], (err, result) => {
+        connection.query(queryString, [table, column, value], (err, result) => {
             if (err) throw err;
             console.log(result);
         });
