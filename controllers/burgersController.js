@@ -6,8 +6,11 @@ const router = express.Router();
 router.get('/', (req, res) => {
     burger.selectAllBurgers(data => {
         console.log(data);
-        res.json(data);
-        // res.render('index', data);
+        let burgerObject = {
+            burger: data
+        };
+        console.log(burgerObject);
+        res.render('index', data);
     })
 });
 
