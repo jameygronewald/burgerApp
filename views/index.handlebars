@@ -1,16 +1,18 @@
-<h1>Eat-Da-Burger!</h1>
 
-<ul>
-    {{#each burger}}
-        <li>
-            {{burger_name}}
-            <button devourButton>Devour It!</button>
-        </li>
-    {{/each}}
-</ul>
 
+<div class="container">
+    <h1>Eat-Da-Burger!</h1>
+    <ul>
+        {{#each burger}}
+            <li>
+                {{id}}. {{burger_name}}
+                <button data-devoured="{{devoured}}" class="devourButton">Devour It!</button>
+            </li>
+        {{/each}}
+    </ul>
+</div>
 <form>
-    <input type="text-area" id="burgerInput" />
+    <input type="text-area" id="burgerInput" name="name" />
     <button type="submit" id ="submitButton">Add Burger</button>
 </form>
 <p>Enter a burger you'd like to eat and click the "Add Burger" button.</p>
