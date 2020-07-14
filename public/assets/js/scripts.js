@@ -10,21 +10,19 @@ $(() => {
         type: "POST",
         data: newBurger
       }).then(() => {
-          console.log(`Added ${newBurger.name}!`);
           location.reload();
         });
     });
 
-    $(".devourButton").on("click", event => {
-        const burgerId = $(this).data("id");
+    $(".devourButton").on("click", function(event) {
+        const id = $(this).data("id");
         const isDevoured = {
-        devoured: true
+            devoured: 1
         };
-        $.ajax("/api/burgers/" + burgerId, {
+        $.ajax("/api/burgers/" + id, {
         type: "PUT",
         data: isDevoured
         }).then(() => {
-            console.log("Burger has beend devoured!");
             location.reload();
         });
     });
