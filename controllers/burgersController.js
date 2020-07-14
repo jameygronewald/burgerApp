@@ -5,18 +5,17 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
     burger.selectAllBurgers(data => {
-        console.log(data);
         let burgerObject = {
             burger: data
         };
-        console.log(burgerObject);
         res.render('index', burgerObject);
     })
 });
 
 router.post('/api/burgers', (req, res) => {
-    console.log(req.body);
-    res.json({ id: result.insertId });
+    burger.createBurger('burger_name', req.body.name, result => {
+        res.json({ id: result.insertId });
+    })
 })
 
 
