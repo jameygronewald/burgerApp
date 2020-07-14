@@ -9,6 +9,11 @@ h1 {
     text-align: center;
 }
 
+#categories {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 ul {
     list-style-type: none;
     padding-right: 40px;
@@ -17,6 +22,12 @@ ul {
 .burgerRow {
     display: flex;
     justify-content: space-between;
+}
+
+.devouredItem {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
 }
 
 .burgerListItem {
