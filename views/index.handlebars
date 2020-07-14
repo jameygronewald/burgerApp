@@ -4,9 +4,9 @@
     <h1>Eat-Da-Burger!</h1>
     <ul>
         {{#each burger}}
-            <li>
-                {{id}}. {{burger_name}}
-                <button data-devoured="{{devoured}}" class="devourButton">Devour It!</button>
+            <li data-devoured="{{devoured}}">
+                {{id}}. {{burger_name}} {{devoured}}
+                <button  data-id="{{id}}" class="devourButton">Devour It!</button>
             </li>
         {{/each}}
     </ul>
