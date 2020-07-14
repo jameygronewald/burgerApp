@@ -1,6 +1,16 @@
 <h1>Eat-Da-Burger!</h1>
 
+<ul>
+    {{#each burger}}
+        <li>
+            {{this.burger_name}}
+            <button devourButton>Devour It!</button>
+        </li>
+    {{/each}}
+</ul>
+
 <form>
     <input type = 'text-area' id = 'burgerInput'>
-    <input type="submit" value="Submit">
+    <button type="submit">Add Burger</button>
 </form>
+<p>Enter a burger you'd like to eat and click the "Add Burger" button.</p>
