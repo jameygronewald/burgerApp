@@ -11,15 +11,37 @@ h1 {
 
 ul {
     list-style-type: none;
+    padding-right: 40px;
+}
+
+.burgerRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.burgerListItem {
+    width: 400px;
+    background-color: #f4f4f4;
+    border: #222 solid;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 2px;
 }
 
 .devourButton {
     background-color: rgb(0, 201, 0);
+    margin: 2px;
+}
+
+.placeholder {
+    width: 400px;
 }
 
 button {
     padding: 5px;
     font-size: 15px;
+    border-radius: 10px;
+    
 }
 
 form {
@@ -29,6 +51,7 @@ form {
 #submitButton {
     background-color: rgb(116, 156, 241);
     color: whitesmoke;
+    margin-top: 10px;
 }
 
 p {
