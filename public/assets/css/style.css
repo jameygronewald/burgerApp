@@ -1,4 +1,6 @@
 body {
+    margin: 0;
+    padding: 0;
     background-color: rgb(250, 214, 114);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #222;
@@ -24,7 +26,7 @@ ul {
     justify-content: space-between;
 }
 
-.devouredItem {
+.devouredRow {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;

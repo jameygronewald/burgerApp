@@ -10,9 +10,9 @@
     </div>
     <ul>
         {{#each burger}}
-            <li class="burgerRow" data-devoured="{{devoured}}">
-                <div class="burgerListItem">{{id}}. {{burger_name}} {{devoured}}</div>
-                <button  data-id="{{id}}" class="devourButton">Devour it!</button>
+            <li {{#if devoured}}class="devouredRow"{{else}}class="burgerRow"{{/if}} data-devoured="{{devoured}}">
+                <div class="burgerListItem">{{id}}. {{burger_name}}</div>
+                {{#if devoured}}<div class="placeholder"></div>{{else}}<button  data-id="{{id}}" class="devourButton">Devour it!</button>{{/if}}
                 <div class="placeholder"></div>
             </li>
         {{/each}}
