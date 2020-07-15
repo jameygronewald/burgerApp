@@ -4,13 +4,13 @@ Full-stack app that uses node, handlebars, express, mySQL, and object-relational
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
 ## Description
+Burger App is a full-stack app using a custom-built ORM in the MVC paradigm, along with node.js. The app uses a mySQL database for storing user inputted data. The data is served up to the DOM through handlebars.js. The app uses AJAX calls and jQuery for requests to an express.js server. Also features all custom-written CSS.
 
 ## Table of Contents
 * [Installation](#Installation)
 * [Usage](#Usage)
 * [Images](#Images)
 * [Contributing](#Contributing)
-* [Credits](#Credits)
 * [License](#License)
 * [Questions](#Questions)
 
@@ -26,7 +26,7 @@ Full-stack app that uses node, handlebars, express, mySQL, and object-relational
 ## Images
 
 ### Screenshots
-![Live App]()
+![Live App](./public/assets/demoImages/liveApp.png)
 
 ## Contributing
 I am the sole contributor on this project.
